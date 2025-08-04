@@ -42,19 +42,19 @@ function main(ctime) {
 
 
 
-//   function isCollide(snakearr) {
-//     for (let i = 1; i < snakearr.length; i++) {
-//         if (snakearr[0].x === snakearr[i].x && snakearr[0].y === snakearr[i].y) {
+  function isCollide(snakearr) {
+    for (let i = 1; i < snakearr.length; i++) {
+        if (snakearr[0].x === snakearr[i].x && snakearr[0].y === snakearr[i].y) {
 
-//             return true;
-//         }
-//         if (snakearr[0].x >= 19 || snakearr[0].x <= 0 || snakearr[0].y >= 19 || snakearr[0].y <= 0) {
-//             console.log("HIT the Boundary")
-//             return true;
-//         }
+            return true;
+        }
+        if (snakearr[0].x >= 19 || snakearr[0].x <= 0 || snakearr[0].y >= 19 || snakearr[0].y <= 0) {
+            console.log("HIT the Boundary")
+            return true;
+        }
         
-//     }
-//   }
+    }
+  }
 
 
 
