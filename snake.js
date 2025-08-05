@@ -95,17 +95,17 @@ function main(ctime) {
         };
 
 
-//         //  if you have eaten the snake , increment the score and  regenerate the food 
+        //  if you have eaten the snake , increment the score and  regenerate the food 
 
-//         if (snakearr[0].y === food.y && snakearr[0].x === food.x) {
-//             score+=1;
-//             ScoreBox.innerHTML = "Score: " + score; 
-//             foodsound.play();
+        if (snakearr[0].y === food.y && snakearr[0].x === food.x) {
+            score+=1;
+            ScoreBox.innerHTML = "Score: " + score; 
+            foodsound.play();
 
-//             snakearr.unshift({ x: snakearr[0].x + direction.x, y: snakearr[0].y + direction.y })
+            snakearr.unshift({ x: snakearr[0].x + direction.x, y: snakearr[0].y + direction.y })
 
-//             food = { x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) }
-//         }
+            food = { x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) }
+        }
 
 
 
