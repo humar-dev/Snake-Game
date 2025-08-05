@@ -59,40 +59,40 @@ function main(ctime) {
 
 
 
-//     function gameEngine() {
-//         backsound.play();
-//                 // Move The snake
-//                 for (let i = snakearr.length - 2; i >= 0; i--) {
+    function gameEngine() {
+        backsound.play();
+                // Move The snake
+                for (let i = snakearr.length - 2; i >= 0; i--) {
 
-//                     snakearr[i + 1] = { ...snakearr[i] };
+                    snakearr[i + 1] = { ...snakearr[i] };
         
-//                 }
+                }
         
-//                 snakearr[0].x += direction.x;
-//                 snakearr[0].y += direction.y;
+                snakearr[0].x += direction.x;
+                snakearr[0].y += direction.y;
         
         
         
-//         // Update the snake array
+        // Update the snake array
         
 
-//         if (isCollide(snakearr)) {
-//             gameoversound.play();
-//             backsound.pause();
-//             direction = { x: 0, y: 0 }
-//             alert("Game Over!! Press Any Key to Play Again!!");
-//             snakearr =
-//                 [
-//                     {
-//                         x: 13,
-//                         y: 15
-//                     }
-//                 ]
-//             backsound.play();
-//             score = 0;
+        if (isCollide(snakearr)) {
+            gameoversound.play();
+            backsound.pause();
+            direction = { x: 0, y: 0 }
+            alert("Game Over!! Press Any Key to Play Again!!");
+            snakearr =
+                [
+                    {
+                        x: 13,
+                        y: 15
+                    }
+                ]
+            backsound.play();
+            score = 0;
 
 
-//         };
+        };
 
 
 //         //  if you have eaten the snake , increment the score and  regenerate the food 
