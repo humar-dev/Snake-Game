@@ -3,10 +3,7 @@ let direction = {
     y: 0
 }
 
-
 let board = document.getElementById("board");
-
-
 const foodsound = new Audio('./music/food.mp3');
 const gameoversound = new Audio('./music/gameover.mp3');
 const backsound = new Audio('./music/music.mp3');
@@ -26,8 +23,6 @@ let a = 2;
 let b = 16;
 let food = { x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) }
 
-
-
 function main(ctime) {
     window.requestAnimationFrame(main);
     console.log(ctime);
@@ -38,8 +33,6 @@ function main(ctime) {
     gameEngine();
 
 }
-
-
 
 
   function isCollide(snakearr) {
@@ -56,9 +49,6 @@ function main(ctime) {
     }
   }
 
-
-
-
     function gameEngine() {
         backsound.play();
                 // Move The snake
@@ -70,11 +60,7 @@ function main(ctime) {
         
                 snakearr[0].x += direction.x;
                 snakearr[0].y += direction.y;
-        
-        
-        
-        // Update the snake array
-        
+                
 
         if (isCollide(snakearr)) {
             gameoversound.play();
@@ -95,8 +81,6 @@ function main(ctime) {
         };
 
 
-        //  if you have eaten the snake , increment the score and  regenerate the food 
-
         if (snakearr[0].y === food.y && snakearr[0].x === food.x) {
             score+=1;
             ScoreBox.innerHTML = "Score: " + score; 
@@ -106,13 +90,6 @@ function main(ctime) {
 
             food = { x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) }
         }
-
-
-
-
-
-
-//         //Display the snake 
 
         board.innerHTML = "";
         snakearr.forEach((e, index) => {
@@ -166,8 +143,6 @@ function main(ctime) {
                 direction.y = 0;
                 direction.x = 1;
                 break;
-
-
 
         }
 
