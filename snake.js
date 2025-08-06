@@ -114,61 +114,61 @@ function main(ctime) {
 
 //         //Display the snake 
 
-//         board.innerHTML = "";
-//         snakearr.forEach((e, index) => {
-//             snakeElement = document.createElement('div');
-//             snakeElement.style.gridRowStart = e.y;
-//             snakeElement.style.gridColumnStart = e.x;
-//             if (index === 0) {
-//                 snakeElement.classList.add('snake')
-//             }
-//             else {
-//                 snakeElement.classList.add('head')
-//             }
-//             board.appendChild(snakeElement);
+        board.innerHTML = "";
+        snakearr.forEach((e, index) => {
+            snakeElement = document.createElement('div');
+            snakeElement.style.gridRowStart = e.y;
+            snakeElement.style.gridColumnStart = e.x;
+            if (index === 0) {
+                snakeElement.classList.add('snake')
+            }
+            else {
+                snakeElement.classList.add('head')
+            }
+            board.appendChild(snakeElement);
 
-//         })
+        })
 
-//         //Display the Food
+        //Display the Food
 
-//         foodElement = document.createElement('div');
-//         foodElement.style.gridRowStart = food.y;
-//         foodElement.style.gridColumnStart = food.x;
-//         foodElement.classList.add('food')
-//         board.appendChild(foodElement)
-
-
-//     }
-
-//     window.requestAnimationFrame(main);
-
-//     window.addEventListener('keydown', e => {
-
-//         movesound.play()
-//         console.log(e.key)
-//         switch (e.key) {
-//             case "ArrowUp":
-
-//                 direction.y = -1;
-//                 direction.x = 0;
-//                 break;
-//             case "ArrowDown":
-//                 direction.y = 1;
-//                 direction.x = 0;
-//                 break;
-
-//             case "ArrowLeft":
-//                 direction.y = 0;
-//                 direction.x = -1;
-//                 break;
-
-//             case "ArrowRight":
-//                 direction.y = 0;
-//                 direction.x = 1;
-//                 break;
+        foodElement = document.createElement('div');
+        foodElement.style.gridRowStart = food.y;
+        foodElement.style.gridColumnStart = food.x;
+        foodElement.classList.add('food')
+        board.appendChild(foodElement)
 
 
+    }
 
-//         }
+    window.requestAnimationFrame(main);
 
-//     })
+    window.addEventListener('keydown', e => {
+
+        movesound.play()
+        console.log(e.key)
+        switch (e.key) {
+            case "ArrowUp":
+
+                direction.y = -1;
+                direction.x = 0;
+                break;
+            case "ArrowDown":
+                direction.y = 1;
+                direction.x = 0;
+                break;
+
+            case "ArrowLeft":
+                direction.y = 0;
+                direction.x = -1;
+                break;
+
+            case "ArrowRight":
+                direction.y = 0;
+                direction.x = 1;
+                break;
+
+
+
+        }
+
+    })
